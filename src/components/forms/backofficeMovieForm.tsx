@@ -7,7 +7,6 @@ import moment from "moment";
 import BackofficeMovieCastForm from "./backofficeMovieCastForm";
 import BackofficeMovieGenreForm from "./backofficeMovieGenreForm";
 import { useFlashbag } from "../../context/contexts";
-import { currentDate } from "../../utilities/utilities";
 
 const BackofficeUserForm: React.FC = () => {
 
@@ -46,8 +45,6 @@ const BackofficeUserForm: React.FC = () => {
                     setFlashbag({"flashbagBody": "Couldn't create movie." ,"flashbagHeader": "Warning" ,"flashbagStatus" : "error"});
                 }
             })
-            
-
         } catch(err) {
             alert(err);
         }
@@ -78,7 +75,7 @@ const BackofficeUserForm: React.FC = () => {
                 </div>
                 <div className={`inputBox secondary`}>
                     <label htmlFor="release_date">Release Date *</label>
-                    <input type="date" name="release_date" id="release_date" className="input" autoComplete="off" value={ moment(movie.release_date === "1900-01-01" ? currentDate() : movie.release_date).format("YYYY-MM-DD") } onChange={handleOnChange} required></input>
+                    <input type="date" name="release_date" id="release_date" className="input" autoComplete="off" value={moment(movie.release_date ? movie.release_date : "").format("YYYY-MM-DD")} onChange={handleOnChange} required></input>
                 </div>
                 <div className="formFooter">
                     <Link to="/backoffice/movies">Go Back</Link>
