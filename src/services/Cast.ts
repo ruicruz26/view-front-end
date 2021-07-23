@@ -9,7 +9,6 @@ class CastService {
     static token: string;
 
     constructor() {
-        debugger;
         CastService.url = `${process.env.REACT_APP_API_URL}/api/`;
         CastService.token = localStorage.getItem("token")!;
     }
