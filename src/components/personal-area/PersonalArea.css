@@ -1,0 +1,31 @@
+.personalAreaContainer {
+    height: 80vh;
+    background: linear-gradient(to right top, rgba(255,255,255,100%),rgba(255,255,255,90%));
+    margin: 20px 10px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    overflow: auto;
+}
+
+.userImage .image i:hover {
+    opacity: 1;
+}
+.userImage .image i::before {
+    font-size: 10em;
+    color: var(--color-grey);
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--color-grey);
+}

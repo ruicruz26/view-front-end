@@ -1,0 +1,270 @@
+.backofficeHeader {
+    display: flex;
+    background: linear-gradient(to right top, rgba(255,255,255,100%),rgba(255,255,255,90%));
+    margin: 0 10px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    gap: 15px;
+}
+
+.backofficeHeader li a {
+    color: var(--background-color);
+    padding: 15px;
+}
+
+.backofficeHeader li a.active {
+    background-color: var(--color-grey);
+    color: #FFF;
+    border-radius: 10px;
+}
+
+.backofficeBody {
+    background: linear-gradient(to right top, rgba(255,255,255,100%),rgba(255,255,255,90%));
+    margin: 20px 10px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    height: 70vh;
+    overflow: auto;
+}
+
+.backofficeBody .listControls {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 35px;
+}
+
+.listControlBack {
+    color: var(--color-grey);
+    font-size: 18px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.backofficeBody button {
+    background-color: var(--color-grey);
+    color: #FFF;
+    font-weight: normal;
+}
+
+.backofficeBody form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+.backofficeBody form .inputBox {
+    width: 100%;
+}
+
+.backofficeBody .listHeader,.backofficeBody .listBody li a:not(.iconlink) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.backofficeBody .listBody li a.iconlink:nth-child(2) {
+    position: absolute;
+    right: 15%;
+    top: 30%;
+}
+.backofficeBody .listBody li a.iconlink:nth-child(3) {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+.backofficeBody .listBody {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.backofficeBody .listBody li {
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.backofficeBody .listBody li:hover {
+    background: var(--color-grey);
+    transition: all 0.3s ease;
+}
+
+.backofficeBody .listBody li p {
+    display: flex;
+    gap: 15px;
+}
+
+.backofficeBody .listHeader p,.backofficeBody .listBody li p,
+.backofficeBody .listBody li p > i:before,
+.backofficeBody .listBody li p > a > i:before,
+.backofficeBody .listBody li a.iconlink > i:before {
+    flex-basis: 25%;
+    color: var(--background-color);
+}
+
+.backofficeBody .listBody li:hover p,
+.backofficeBody .listBody li:hover p > i:before,
+.backofficeBody .listBody li:hover p > a > i:before,
+.backofficeBody .listBody li:hover a.iconlink > i:before  {
+    color: #FFF;
+}
+
+.backofficeBody .formFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.backofficeBody .formFooter a {
+    font-size: 18px;
+    font-weight: boldf;
+    color: var(--color-grey);
+}
+
+.backofficeBody form button {
+    width: 20%;
+}
+
+.backofficeBody form .dropdownPrimary {
+    width: 100%;
+}
+
+.extraAddTitle {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+h2.extraAddTitle p {
+    color: var(--background-color);
+}
+
+.ExtraAddContainer {
+    display: flex;
+}
+
+.addContainer, .showAddedContainer {
+    flex-basis: 50%;
+}
+
+.addedList {
+    padding: 25px 20px 20px 20px;
+    display: flex;
+    gap: 10px;
+    padding: 32px 20px 20px 20px;
+    flex-wrap: wrap;
+}
+
+.addedList li i::before {
+    color: var(--background-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.backofficeBody ul.imageList li {
+    position: relative;
+    height: 20vh;
+    width: 20vw;
+}
+
+.backofficeBody ul.imageList li img {
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.backofficeBody ul.imageList li i {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+}
+
+.backofficeBody ul.imageList li i::before {
+    font-size: 30px;
+}
+
+.backofficeBody ul.imageList li i.fa-trash {
+    right: 25%;
+    cursor: pointer;
+}
+
+.backofficeBody ul.imageList li i.fa-hand-point-up {
+    left: 25%;
+    cursor: pointer;
+}
+
+.backofficeBody ul.imageList li:hover img {
+    filter: grayscale(0.6);
+}
+
+.backofficeBody ul.imageList li:hover i {
+    opacity: 1;
+}
+
+.backofficeBody ul.imageList {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.backofficeBody ul.imageList li.whiteBox {
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 10% 15%;
+    z-index: 2;
+}
+
+.backofficeBody ul.imageList li.whiteBox i.fa-trash {
+    display: none;
+}
+
+.backofficeBody ul.imageList li.whiteBox i.fa-hand-point-up {
+    left: 50%;
+}
+
+.streamsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.streamsList li {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    gap: 5vw;
+    justify-content: flex-start;
+}
+
+.streamsList video {
+    width: 50%;
+    height: 100%;
+}
+
+.streamsList li div {
+    display: flex;
+    gap: 15px;
+    align-items: center;    
+}
+
+.streamsList li div p,.streamsList li div i::before {
+    color: var(--color-grey);
+}
+
+.listControls > .dropdownPrimary {
+    width: 200px;
+    margin-right: 15px;
+}

@@ -1,0 +1,27 @@
+.loginContainer {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer a {
+    text-align: center;
+}
+
+.loginContainer h2 {
+    color: #FFF;
+    margin-bottom: 2em;
+}
+
+form.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80vw;
+}
+
+form.loginForm button {
+    margin-top: 20px;
+}

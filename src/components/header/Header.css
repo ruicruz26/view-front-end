@@ -1,0 +1,78 @@
+header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    height: 10vh;
+}
+
+.logo {
+    font-size: 2em;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    right: -100vw;
+    background-color: var(--background-color-dark);
+    height: 100vh;
+    width: 40vw;
+    transition: all 0.7s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 10px 0 0 10px;
+    z-index: 2;
+}
+
+nav > i.open + ul {
+    right: 0;
+}
+
+.flashbag {
+    height: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid #FFF;
+    border-radius: 15px;
+    animation: fadedown 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.flashbag .flashBagHeader {
+    font-weight: bold;
+}
+
+.flashbag.error {
+    background-color: var(--color-error-500);
+}
+
+.flashbag.success {
+    background-color: var(--color-success-500);
+}
+
+@keyframes fadedown {
+    
+    0% {
+        top: 0px;
+        opacity: 0.2;
+    }
+
+    20% {
+        top: 20px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 0;
+    }
+}

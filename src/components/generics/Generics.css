@@ -1,0 +1,179 @@
+button {
+    all: unset;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+button.primary {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+button.primary:hover {
+    opacity: 0.8;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+input {
+    outline: none;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+textarea {
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputBox i {
+    position: absolute;
+    right: 5px;
+    top: 55%;
+}
+
+.inputBox.primary input::placeholder , .inputBox.secondary input::placeholder {
+    opacity: 0.5;
+}
+
+.inputBox.primary label {
+    color: var(--color-light);
+    font-weight: bold;
+}
+
+.inputBox.primary input {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.inputBox.primary i::before {
+    color: var(--color-dark);
+}
+
+.inputBox.secondary label {
+    color: var(--color-grey);
+    font-weight: bold;
+}
+
+.inputBox.secondary input {
+    background-color: var(--color-light);
+    color: var(--color-grey);
+    border: 2px solid var(--color-grey);
+}
+
+.inputBox.secondary i::before {
+    color: var(--color-grey);
+}
+
+
+.inputBox.primary textarea {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    resize: none;
+}
+
+.inputBox.secondary textarea {
+    background-color: var(--color-light);
+    color: var(--color-grey);
+    border: 2px solid var(--color-grey);
+    resize: none;
+}
+
+select {
+    all: unset;
+    height: 40px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.dropdownPrimary {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.dropdownPrimary label {
+    font-weight: bold;
+}
+
+.dropdownPrimary select {
+    background-color: var(--color-light);
+    color: var(--color-grey);
+    border: 2px solid var(--color-grey);
+    display: flex;
+    align-items: center;
+}
+
+.dropdownPrimary select:disabled {
+    background: var(--color-neutral-100);
+    border-color: var(--color-neutral-300);
+    color: var(--color-neutral-500);
+}
+
+.dropdownPrimary:after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    color: var(--color-primary-300);
+    right: 10px;
+    bottom: 7px;
+    transition: all 0.2s ease;
+}
+
+.dropdownPrimary.opened::after {
+    transform: rotate(180deg);
+}
